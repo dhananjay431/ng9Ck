@@ -38,8 +38,13 @@ ng g component feature/new-cmp
 Next, you’ll need a feature module with a component to route to. To make one, enter the following command in the terminal, where customers is the name of the feature module. The path for loading the customers feature modules is also customers because it is specified with the --route option:
 
 ```bash
+#without Folder
 ng g m customers --routing --module app.module
-ng g c customers --flat --module customers.module
+ng g c customersList --flat --module customers.module 
+
+#with Folder
+ng g m customers --routing --module app.module
+ng g c customersList --flat --module customers.module 
 
 ```
 ## angular components [Angular Bootstrap](https://valor-software.com/ngx-bootstrap/#/documentation#getting-started)
