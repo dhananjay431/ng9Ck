@@ -39,6 +39,7 @@ Next, you’ll need a feature module with a component to route to. To make one, 
 
 ```bash
 ng g m customers --routing --module app.module
+ng g c customers --flat --module customers.module
 
 ```
 ## angular components [Angular Bootstrap](https://valor-software.com/ngx-bootstrap/#/documentation#getting-started)
