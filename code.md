@@ -45,3 +45,17 @@ export class HeroService {
   
 }
 ```
+> ## Ajax Call
+```typescript
+  this.heroservice.ajax(
+      "GetPA_OpportunityDetailsXML",
+      "http://schemas.cordys.com/PA_WsAppPackage",
+      {
+      cursor:0,
+      InParam:""}).then(resp=>{
+         console.log("resp=>",resp);
+      },err=>{
+         console.log("err=>",err);
+      })
+      ```
+
