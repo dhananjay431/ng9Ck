@@ -32,33 +32,33 @@ ng g component feature/new-cmp
 | Module	| ng g module my-module |
 
 ```typescript
+
 //router
 const routes: Routes = [
-  {
-    path:"home",component:MainComponent
-  },
-  {
-    path:"sub/:id",loadChildren:()=> import("./sub/sub.module").then(m => m.SubModule)
-  }
+    {
+        path: "home", component: MainComponent
+    },
+    {
+        path: "sub/:id", loadChildren: () => import("./sub/sub.module").then(m => m.SubModule)
+    }
 ];
-
 //calling
-import { Router }  from '@angular/router';
-constructor(private router:Router){}
-this.router.navigate(['sub','passData'])
+import { Router } from '@angular/router';
+constructor(private router: Router){ }
+this.router.navigate(['sub', 'passData'])
 
 // get id from route 
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
- constructor(
+constructor(
     private route: ActivatedRoute,
     private router: Router
-  ) {}
- try{
-      vm.name = vm.route.snapshot.paramMap.get('id')
-    }catch(err){
-        console.log(err);
-        vm.router.navigate(["/home"]);
-    }
+) { }
+try {
+    vm.name = vm.route.snapshot.paramMap.get('id')
+} catch (err) {
+    console.log(err);
+    vm.router.navigate(["/home"]);
+}
 ```
 
 > ## Create a feature module with routing [live Example](https://stackblitz.com/angular/eydbdkevjmb?file=src%2Fapp%2Fapp-routing.module.ts) 
